@@ -1,0 +1,1 @@
+memory-profiler==0.61.0jsonrecollections
