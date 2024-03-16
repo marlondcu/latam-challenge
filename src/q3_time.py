@@ -25,12 +25,3 @@ def q3_time(file_path: str) -> List[Tuple[str, int]]:
     top_mentions = mention_counter.most_common(10)
 
     return top_mentions
-
-# Example usage:
-file_path = "/Users/marlonoliveira/Downloads/farmers-protest-tweets-2021-2-4.json"
-result = q3_time(file_path)
-print(result)
-
-# This version uses ThreadPoolExecutor to parallelize the processing of tweets. The process_tweet function extracts mentions from each tweet, and the ThreadPoolExecutor efficiently distributes the workload across multiple threads.
-
-# Note: The effectiveness of parallelization depends on the number of available CPU cores and the nature of the processing tasks. Adjust the regex pattern (mention_pattern) based on your specific dataset.

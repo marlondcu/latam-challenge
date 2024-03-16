@@ -25,13 +25,3 @@ def q2_memory(file_path: str) -> List[Tuple[str, int]]:
     top_emojis = emoji_counter.most_common(10)
 
     return top_emojis
-
-
-# Example usage:
-file_path = "/Users/marlonoliveira/Downloads/farmers-protest-tweets-2021-2-4.json"
-result = q2_memory(file_path)
-print(result)
-
-# In this version, we process each line individually, and as soon as we extract the emojis from a tweet, we update the Counter. This way, we avoid keeping a large list of emojis in memory.
-
-# This optimization should help reduce memory usage, especially when dealing with a large number of tweets in the JSON file.

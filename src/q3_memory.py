@@ -25,13 +25,3 @@ def q3_memory(file_path: str) -> List[Tuple[str, int]]:
     top_mentions = mention_counter.most_common(10)
 
     return top_mentions
-
-
-# Example usage:
-file_path = "/Users/marlonoliveira/Downloads/farmers-protest-tweets-2021-2-4.json"
-result = q3_memory(file_path)
-print(result)
-
-# To optimize the code for memory usage, we can make some modifications to reduce the memory footprint. Specifically, we can avoid storing the entire list of mentions in memory and update the counter directly as we process each line
-
-# In this version, the mention_counter is updated directly without storing the entire list of mentions in memory. This optimization helps reduce the memory footprint, especially when dealing with a large number of tweets in the JSON file.

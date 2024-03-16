@@ -28,11 +28,3 @@ def q2_time(file_path: str) -> List[Tuple[str, int]]:
     top_emojis = emoji_counter.most_common(10)
 
     return top_emojis
-
-# Example usage:
-file_path = "/Users/marlonoliveira/Downloads/farmers-protest-tweets-2021-2-4.json"
-result = q2_time(file_path)
-print(result)
-
-
-#This modification uses the ThreadPoolExecutor to concurrently process tweets and extract emojis, which can improve the overall execution time, especially when dealing with a large number of tweets. Keep in mind that the effectiveness of parallelization depends on factors such as the number of available CPU cores and the nature of the processing tasks.
