@@ -1,7 +1,3 @@
-#from typing import List, Tuple
-#from datetime import datetime
-
-
 import json
 from collections import Counter
 from typing import List, Tuple
@@ -21,13 +17,11 @@ def q2(file_path: str) -> List[Tuple[str, int]]:
             emojis = extract_emojis(tweet["content"])
             emoji_counter.update(emojis)
 
-    # Get the top 10 most used emojis
-    top_emojis = emoji_counter.most_common(10)
-
+    top_emojis = emoji_counter.most_common(10) # get the top 10 most used emojis
     return top_emojis
 
 
 # Example usage:
-file_path = "/Users/marlonoliveira/Downloads/farmers-protest-tweets-2021-2-4.json"
+file_path = "farmers-protest-tweets-2021-2-4.json"
 result = q2(file_path)
 print(result)
